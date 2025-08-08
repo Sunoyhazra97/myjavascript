@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+     <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+</head>
+<style>
+.pic{
+    width:50%;
+    height:300px;
+    box-shadow:10px 10px 10px gray;
+    border:10px white solid;
+    display:block;
+    margin:auto;
+    transition:2s;
+}
+.zoomout{
+    transition:2s;
+    transform:scale(0);
+
+
+}
+.zoom{
+    transition:2s;
+    transform:scale(1)
+}
+</style>
+<body>
+ <img src="images/p1.jpg" class="pic">
+ <div style="height:200px"></div>  
+
+ <img src="images/p1.jpg" class="pic">
+ <div style="height:200px"></div>  
+
+ <img src="images/p1.jpg" class="pic">
+ <div style="height:200px"></div>  
+
+ <img src="images/p1.jpg" class="pic">
+ <div style="height:200px"></div>  
+
+ <img src="images/p1.jpg" class="pic">
+ <div style="height:200px"></div> 
+ 
+ <img src="images/p1.jpg" class="pic">
+ <div style="height:200px"></div>  
+
+ <script>
+    var d=document.getElementsByTagName("img")
+
+    function f1()
+    {
+        document.title=Math.round(window.scrollY)
+
+        if(window.scrollY>106)
+
+        if(window.scrollY<106){
+           // d[0].style.transform="scale(1)"
+            d[0].classList.remove('animate_animated', 'animate_bouncOutLeft');
+            d[0].classList.add('animate_animated', 'animate_bounceInRight');
+
+        }
+        if(window.scrollY>91){d[0].style.transform="scale(0)"}
+        if(window.scrollY<91){d[0].style.transform="scale(1)"}
+
+        if(window.scrollY>634){d[1].style.transform="scale(0)"}
+        if(window.scrollY<634){d[1].style.transform="scale(1)"}
+
+        if(window.scrollY>1078){d[2].style.transform="scale(0)"}
+        if(window.scrollY<1078){d[2].style.transform="scale(1)"}
+
+        if(window.scrollY>1636){d[3].style.transform="scale(0)"}
+        if(window.scrollY<1636){d[3].style.transform="scale(1)"}
+
+         if(window.scrollY>2129){d[4].style.transform="scale(0)"}
+        if(window.scrollY<2129){d[4].style.transform="scale(1)"}
+
+      
+        }
+    window.addEventListener("scroll",f1)
+ </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .pic{
+    width:20%;
+    box-shadow:10px 10px 10px gray;
+    position:absolute;
+    left:0px;
+    top:0px;
+    cursor:move;
+ }
+</style>
+<body>
+   <img src="images/p1.jpg" class="pic" id="pic">
+   <script>
+    var x=0
+    var y= 0;
+    var dragmode=false
+
+    p=document.getElementById("pic")
+    p.onclick=function()
+    {
+        dragmode=(!dragmode)?true:false
+        document.title=dragmode
+
+    }
+
+    document.addEventListener("mousemove",function(e)
+    {
+        x=-140+e.pageX+"px"
+        y=-80+e.pageY+"px"
+        //document.title = "X = "+e.pageX+" Y = "+e.pageY
+    if(dragmode)
+    {
+        p.style.left = x
+        p.style.top=y
+    }
+
+    })
+   </script>    
+</body>
+</html>

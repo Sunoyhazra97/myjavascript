@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if statement-conditional statement</title>
+</head>
+<body>
+    Marks:<input type="text" id="num1">
+    <button type="button" onclick="check()" >status check</button>
+    <script>
+function check()
+{
+    var a=document.getElementById("num1").value;
+
+    if(a>=300){
+    document.write("congrats! u r first");
+}
+else if(a>=225){
+    document.write("congrats u r 2nd");
+}
+else if(a>=165){
+    document.write("congrats u r third");
+}
+else{
+    document.write("sorry u r failed");
+}
+}
+
+
+    </script>
+    
+</body>
+</html>

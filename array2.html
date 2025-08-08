@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+var c= new Array(104)
+for(var i = 0; i < c.length; i++)
+{
+var r=Math.round(Math.random()*255)
+var g=Math.round(Math.random()*255)
+var b=Math.round(Math.random()*255)
+var mycolor=`rgb(${r},${g},${b})`
+
+c[i]=mycolor
+
+document.write(`<h1 style='background:${c[i]};'>${c[0]}</h1>`)
+}
+//alert(c[0])
+document.title="Array"
+    </script>
+</body>
+</html>
