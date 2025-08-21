@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style>
+    /*animate_bouceIn*/
+
+    #board
+    {
+        background: black;
+        position:absolute;
+        top:40px;
+        left:10px;
+        width:80%;
+        height:100px;
+        color:white;
+        padding:20px;
+        font-family: arial black;
+        font-size:20px;
+    }
+    #text{
+        color:white;
+    }
+
+</style>
+<body>
+    <div id="board">News</div>
+    <div id="text"></div>
+    <script>
+        const news =["Former US ambassador to the United Nations Nikki Haley, has warned that the Donald Trump administration's ties, with India are at a “troubling inflexion point, cautioning against allowing trade tensions to derail a partnership critical to countering China."]
+   
+        //const board = document.getElementById("board")
+        //const text = document.getElementById("text")
+
+        var c = 0
+        function change_news()
+        {
+            board.innerHTML = "<div id ='text' style='color:red'>"+ news[c]+"</div>"
+        if(c<news.length-1)
+        {
+        //board.classname="animate__animated animate__bounce"
+        text.classList.add("animate__animated", "animate__bounce")
+
+        c++
+
+        document.title=c
+        }
+        else
+        {
+        c=0 
+
+        }
+    }
+    
+
+
+    setInterval("change_news()",1000)
+    text.addeventListener('animationed',f1);
+        </script>
+</body>
+</html>
